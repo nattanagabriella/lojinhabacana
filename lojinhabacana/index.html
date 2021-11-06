@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lojinha Bacana | E-commerce</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="navbar">
+          <div class="logo">
+            <a href="index.html">
+              <img src="images/logo.png" alt="" class="logo"
+            /></a>
+          </div>
+          <nav>
+            <ul id="MenuItens">
+              <li><a href="index.html">Início</a></li>
+              <li><a href="products.html">Produtos</a></li>
+              <li><a href="">Acessórios</a></li>
+              <li><a href="">Contato</a></li>
+              <li><a href="account.html">Conta</a></li>
+              <!-- TODo:-->
+            </ul>
+          </nav>
+          <a href="cart.html"
+            ><img src="images/cart.png" alt="" width="30px" height="30px"
+          /></a>
+          <img
+            src="images/menu.png"
+            alt=""
+            class="menu-icon"
+            onclick="menutoggle()"
+          />
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <h1>
+              A Lojinha mais Bacana e<br />
+              Style dessa Internet!
+            </h1>
+            <p>
+              As roupas do Instagram, das Blogueirinhas,<br />
+              dos gênios vocÊ encontra aqui e muito mais!!
+            </p>
+            <a href="" class="btn">Explore Agora &#8594;</a>
+          </div>
+          <div class="col-2">
+            <img src="images/image1.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!----- Produtos em Destaque--------->
+    <div class="categories">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-3">
+            <img src="images/category-1.jpg" alt="" />
+          </div>
+          <div class="col-3">
+            <img src="images/category-2.jpg" alt="" />
+          </div>
+          <div class="col-3">
+            <img src="images/category-3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!----- Produtos em Destaque--------->
+    <div class="small-container">
+      <h2 class="title">Produtos em Destaque</h2>
+      <div class="row">
+        <div class="col-4">
+          <a href="product-details.html">
+            <img src="images/product-1.jpg" alt=""
+          /></a>
+          <h4>Polo Masculina Azul</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$50.00</p>
+        </div>
+
+        <div class="col-4">
+          <img src="images/product-2.jpg" alt="" />
+          <h4>Polo Masculina Listras</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$50.00</p>
+        </div>
+
+        <div class="col-4">
+          <img src="images/product-3.jpg" alt="" />
+          <h4>Blazer Feminino</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+          </div>
+          <p>$50.00</p>
+        </div>
+        <div class="col-4">
+          <img src="images/product-4.jpg" alt="" />
+          <h4>Vestido Elegance</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$50.00</p>
+        </div>
+      </div>
+      <h2 class="title">Produtos Recentes</h2>
+      <div class="row">
+        <div class="col-4">
+          <img src="images/product-5.jpg" alt="" />
+          <h4>Polo Masculina Branca</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$50.00</p>
+        </div>
+
+        <div class="col-4">
+          <img src="images/product-6.jpg" alt="" />
+          <h4>Relógio do Poder</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$50.00</p>
+        </div>
+
+        <div class="col-4">
+          <img src="images/product-7.jpg" alt="" />
+          <h4>Bermuda Listrada</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+          </div>
+          <p>$50.00</p>
+        </div>
+        <div class="col-4">
+          <img src="images/product-8.jpg" alt="" />
+          <h4>Tênis All Star Converse</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$50.00</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <img src="images/product-9.jpg" alt="" />
+          <h4>Blusa Ciganinha</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$50.00</p>
+        </div>
+
+        <div class="col-4">
+          <img src="images/product-10.jpg" alt="" />
+          <h4>Blusa com Gola</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$50.00</p>
+        </div>
+
+        <div class="col-4">
+          <img src="images/product-11.jpg" alt="" />
+          <h4>Blusa Babados</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+          </div>
+          <p>$50.00</p>
+        </div>
+        <div class="col-4">
+          <img src="images/product-12.jpg" alt="" />
+          <h4>Blusa Jeans</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$50.00</p>
+        </div>
+      </div>
+    </div>
+
+    <!-------- Outros --------->
+    <div class="offer">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-2">
+            <img src="images/exclusive.png" class="offer-img" alt="" />
+          </div>
+          <div class="col-2">
+            <p>Exclusivo na Lojinha Bacana</p>
+            <h1>Smartwatch Samsung Galaxy </h1>
+            <small
+              >Smartwatch Samsung Galaxy Watch Active 40mm Rosé
+              com Tela Super Amoled de 1.1", Bluetooth, Wi-Fi, GPS, NFC e
+              Sensor de Frequência Cardíaca.
+            </small>
+            <a href="" class="btn">Compre agora &#8594;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------ Testimonial  ------>
+    <div class="testimonial">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-3">
+            <i class="fa fa-quote-left"></i>
+
+            <p>
+              Essa é a melhor Lojinha que eu já encontrei na internet.
+              Obrigada pela qualidade nos produtos.
+              Envio extremamente rápido.
+            </p>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <img src="images/user-1.png" alt="" />
+            <h3>Nattana Gasparim</h3>
+          </div>
+
+          <div class="col-3">
+            <i class="fa fa-quote-left"></i>
+
+            <p>
+              Essa loja é genial.
+              Estou perplexo com a rápidez na minha entrega.
+              Vlw Flw.
+            </p>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <img src="images/user-2.png" alt="" />
+            <h3>Bill Gatezinho</h3>
+          </div>
+
+          <div class="col-3">
+            <i class="fa fa-quote-left"></i>
+
+            <p>
+              Eu amei.
+              Lindas peças, posso somar quantas já comprei.
+              Ainda estou encantada e analisando as novas compras.
+            </p>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <img src="images/user-3.png" alt="" />
+            <h3>Ada Lovelace</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Marcas -->
+
+    <div class="brands">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-5">
+            <img src="images/logo-godrej.png" alt="" />
+          </div>
+          <div class="col-5">
+            <img src="images/logo-oppo.png" alt="" />
+          </div>
+          <div class="col-5">
+            <img src="images/logo-paypal.png" alt="" />
+          </div>
+          <div class="col-5">
+            <img src="images/logo-philips.png" alt="" />
+          </div>
+          <div class="col-5">
+            <img src="images/logo-coca-cola.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rodapé -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>App Download</h3>
+            <p>
+              Download App 
+              para Android/IOS. <br />
+            </p>
+            <div class="app-logo">
+              <img src="images/play-store.png" alt="" />
+              <img src="images/app-store.png" alt="" />
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <img src="images/logo-white.png" alt="" />
+            <p>
+              Garantimos o melhor produto e a entrega 
+              mais rápida do mundo!
+            </p>
+          </div>
+          <div class="footer-col-3">
+            <h3>Links</h3>
+            <ul>
+              <li>Cupons</li>
+              <li>Blog</li>
+              <li>Política de Devolução</li>
+              <li>Seja Afiliado</li>
+            </ul>
+          </div>
+
+          <div class="footer-col-4">
+            <h3>Redes Sociais</h3>
+            <ul>
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Instagram</li>
+              <li>YouTube</li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <p class="copyright">Copyright 2021 - Lojinha Bacana </p>
+      </div>
+    </div>
+  </body>
+</html>

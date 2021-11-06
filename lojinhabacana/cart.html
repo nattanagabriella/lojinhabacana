@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lojinha Bacana | E-commerce</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logo.png" alt="" class="logo"
+          /></a>
+        </div>
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="products.html">Produtos</a></li>
+            <li><a href="">Acessórios</a></li>
+            <li><a href="">Contato</a></li>
+            <li><a href="account.html">Conta</a></li>
+            <!-- TODo -->
+          </ul>
+        </nav>
+        <a href="cart.html"
+          ><img src="images/cart.png" alt="" width="30px" height="30px"
+        /></a>
+        <img
+          src="images/menu.png"
+          alt=""
+          class="menu-icon"
+          onclick="menutoggle()"
+        />
+      </div>
+    </div>
+
+    <!-- itens do Carrinho e Detalhes -->
+    <div id="selecao" class="small-container cart-page">
+      <table>
+        <tr>
+          <th>Produto</th>
+          <th>Quantidade</th>
+          <th>Subtotal</th>
+        </tr>
+        <tr class="item">
+          <td>
+            <div class="cart-info">
+              <img src="images/buy-1.jpg" alt="" />
+              <div>
+                <p>Polo Masculina Azul</p>
+                <small>Preço: $<span class="valor-unitario">80.00</span></small>
+                <br />
+                <a href="">Remover</a>
+              </div>
+            </div>
+          </td>
+          <td><input type="number" value="1" min="1" class="quantidade"/></td>
+          <td>$<span class="valor-parcial">80.00</td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <div class="cart-info">
+              <img src="images/buy-2.jpg" alt="" />
+              <div>
+                <p>Bermuda Masculina Preto</p>
+                <small>Preço: $<span class="valor-unitario">50.00</span></small>
+                <br />
+                <a href="">Remover</a>
+              </div>
+            </div>
+          </td>
+          <td><input type="number" value="1" min="1" class="quantidade"/></td>
+          <td>$<span class="valor-parcial">50.00</span></td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <div class="cart-info">
+              <img src="images/buy-3.jpg" alt="" />
+              <div>
+                <p>Sapatênis Masculino Preto</p>
+                <small>Preço: $<span class="valor-unitario">120.00</span></small>
+                <br />
+                <a href="">Remover</a>
+              </div>
+            </div>
+          </td>
+          <td><input type="number" value="1" min="1" class="quantidade"/></td>
+          <td>$<span class="valor-parcial">120.00</span></td>
+        </tr>
+      </table>
+
+      <div class="total-price">
+        <table>
+          <tr>
+            <td>Subtotal</td>
+            <td>$<span id="subtotal">250.00</span></td>
+          </tr>
+          <tr>
+            <td>Entrega</td>
+            <td>$<span id="frete">30.00</span></td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td>$<span id="total">280.00</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Download App</h3>
+            <p>
+              Download App para Android/IOS <br />
+            </p>
+            <div class="app-logo">
+              <img src="images/play-store.png" alt="" />
+              <img src="images/app-store.png" alt="" />
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <img src="images/logo-white.png" alt="" />
+            <p>
+              Garantimos o melhor produto e a entrega <br/>
+              mais rápida do mundo! 
+            </p>
+          </div>
+          <div class="footer-col-3">
+            <h3>Links</h3>
+            <ul>
+              <li>Copons</li>
+              <li>Blog</li>
+              <li>Política de Devolução </li>
+              <li>Seja Afiliadade</li>
+            </ul>
+          </div>
+
+          <div class="footer-col-4">
+            <h3>Redes Sociais</h3>
+            <ul>
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Instagram</li>
+              <li>YouTube</li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <p class="copyright">Copyright 2021 - Lojinha Bacana</p>
+      </div>
+    </div>
+
+    <script>
+      function getParentByClassName(elem, classname){
+        if (elem.className.split(' ').indexOf(classname) >= 0) return elem;
+        try{
+          return getParentByClassName(elem.parentNode, classname);
+        }catch(TypeError){
+          return undefined;
+        }
+      }
+
+      function atualizaValorParcial(evt) {
+        const item = getParentByClassName(evt.currentTarget, "item");
+
+        const valorUnitario = parseFloat(item.getElementsByClassName("valor-unitario")[0].innerHTML);
+        const quantidade = parseInt(item.getElementsByClassName("quantidade")[0].value);
+        const valorParcial = valorUnitario * quantidade;
+
+        item.getElementsByClassName("valor-parcial")[0].innerHTML = valorParcial.toFixed(2);
+
+        atualizaValorTotal();
+      }
+
+      function atualizaValorTotal() {
+        const selecao = document.getElementById("selecao");
+        
+        const subtotais = Array.from(selecao.getElementsByClassName("valor-parcial"));
+        const subtotal = subtotais.reduce((acc, curr) => acc + parseFloat(curr.innerHTML), 0);
+
+        document.getElementById("subtotal").innerHTML = subtotal.toFixed(2);
+        
+        const freteElem = document.getElementById("frete");
+        let frete = parseFloat(freteElem.innerHTML);
+        if(subtotal < 400) {
+          freteElem.classList.remove("frete-gratis");
+        } else {
+          frete = 0;
+
+          if(!freteElem.classList.contains("frete-gratis")) {
+            freteElem.classList.add("frete-gratis");
+            window.alert("Parabéns! Sua compra acima de $ 400.00 ganhou frete gratuito!")
+          }
+        }
+        const total = frete + subtotal;
+
+        document.getElementById("total").innerHTML = total.toFixed(2);
+      }
+
+      Array.from(document.getElementsByClassName("quantidade")).forEach(qtde => 
+        qtde.addEventListener("change", atualizaValorParcial)
+      );
+    </script>
+  </body>
+</html>
